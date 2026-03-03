@@ -4,6 +4,18 @@ body {
   background-color: #ffffff;
 }
 
+/* inline closure image */
+.closure-image {
+  text-align: center;
+  background-color: #ffdddd;
+  padding: 10px 0;
+}
+.closure-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .layout_padding {
   padding: 75px 0;
 }
