@@ -30,9 +30,22 @@
 
 <body>
 
-  <!-- 폐업사실증명 이미지 표시 (inline) -->
-  <div class="closure-image">
-    <img src="close.png" alt="폐업사실증명" />
+  <!-- 공고 팝업 모달 (항상 열림, 닫기 불가) -->
+  <div class="modal fade show" id="announcementModal" tabindex="-1" role="dialog" aria-labelledby="announcementModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" style="display:block;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="announcementModalLabel">해산 및 채권신고공고 (1차)</h2>
+        </div>
+        <div class="modal-body">
+          <p>본 회사는 2026 년 3 월 10 일 임시주주총회에서 해산을 결의하고, 현재 청산절차를 진행 중인 바 본 회사 해산에 대하여 이의가 있는 분이나 채권을 가지고 계신 분은 본 공고게재 익일부터 2개월이내에 이의나 그 채권액을 본 회사에 신고하여 주시기 바랍니다. 만일 위 기일내에 신고가 없으면 청산에서 제외됨을 공고합니다.</p>
+          <p>2026 년 3 월 10 일</p>
+          <p>저장상회 주식회사</p>
+          <p>경기도 용인시 수지구 신수로 767, A동 1708호(동천동, 분당수지 U-TOWER)</p>
+          <p>청산인 정재욱</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="hero_area">
@@ -728,6 +741,11 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#announcementModal').modal('show');
+    });
+  </script>
 
 </body>
 
