@@ -913,4 +913,61 @@ a:focus {
 .footer_section a {
   color: #ffffff;
 }
+/* 인쇄 설정 최적화 (화면 모습 + 브라우저 정보 동시 보존) */
+@media print {
+  @page {
+    margin: 20mm !important; /* 브라우저 머리말/꼬리말용 표준 여백 */
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background: white !important;
+  }
+
+  /* 배경 이미지가 있는 구역 설정 */
+  .hero_area {
+    background-image: url(../images/hero-bg.png) !important;
+    background-size: cover !important;
+    background-position: bottom !important;
+    height: 100vh !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  /* 흰색 글자 대비 확보 (인쇄 시 가독성) */
+  .navbar-brand span,
+  .custom_nav-container .navbar-nav .nav-item .nav-link,
+  .quote_btn-container a {
+    color: #333 !important;
+  }
+
+  /* 공고문 모달 위치 (머리말과 겹치지 않게 여유 공간 확보) */
+  #announcementModal {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: block !important;
+    opacity: 1 !important;
+    width: 600px !important;
+    z-index: 999999 !important;
+  }
+
+  .modal-dialog {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .modal-content {
+    background-color: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3) !important;
+  }
+
+  /* 인쇄 시 불필요한 하단 정보 섹션 등은 숨김 처리하여 1페이지 내에 공고문이 잘 들어오게 함 */
+  .about_section, .service_section, .work_section, .team_section, .client_section, .info_section, .footer_section {
+    display: none !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */
