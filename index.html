@@ -774,8 +774,8 @@
           const isLatest = (i === currentRound - 1);
 
           htmlContent += `
-            <div class="notice-item" style="${!isLatest ? 'opacity: 0.6; padding-top: 20px; border-top: 1px dashed #ccc; margin-top: 20px;' : ''}">
-              <h3 style="font-size: 1.1rem; font-weight: bold; margin-bottom: 15px; color: ${isLatest ? '#333' : '#888'}">
+            <div class="notice-item" style="${!isLatest ? 'padding-top: 20px; border-top: 1px dashed #ccc; margin-top: 20px;' : ''}">
+              <h3 style="font-size: 1.1rem; font-weight: bold; margin-bottom: 15px; color: #333;">
                 ${isLatest ? '' : '[이전 공고] '}${item.title}
               </h3>
               <p style="margin-bottom: 15px; line-height: 1.6;">${item.content}</p>
